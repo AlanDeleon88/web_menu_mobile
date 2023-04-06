@@ -5,8 +5,20 @@ body{
     margin:0px;
 }
 .main{
-    width: 1700px;
-    height: 925px;
+    /* width: 1700px;
+    height: 925px; */
     /* height: 896px;
     width: 414px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    width: 99.9%;
+    height: 100%;
+    object-fit: fill;
+    position: fixed;
+    top:0;
+    left:0;
+    margin: 0px;
+    padding: 0px;
 }
