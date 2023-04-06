@@ -17,7 +17,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .sub-menu-container{
@@ -27,5 +27,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 40px;
+    /* margin-right: 40px; */
 }
