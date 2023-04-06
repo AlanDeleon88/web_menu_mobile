@@ -1,0 +1,31 @@
+.main-menu-container{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px red;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 80px;
+}
+
+.main-menu-sub-menu-container{
+    border: solid 1px green;
+    height: 80%;
+    width: 60%;
+    font-size: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-menu-container{
+    border: solid 1px blue;
+    width: 40%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+}
