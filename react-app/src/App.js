@@ -9,6 +9,7 @@ import UsersList from './components/UsersList';
 import User from './components/User';
 import { authenticate } from './store/session';
 import ChrisTest from './components/ChrisTest';
+import MainMenu from './components/MainMenu';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -26,8 +27,9 @@ function App() {
   }
 
   return (
+    <div className='main'>
     <BrowserRouter>
-      <NavBar />
+      {/* <NavBar /> */}
       <Switch>
         <Route path='/login' exact={true}>
           <LoginForm />
@@ -38,6 +40,13 @@ function App() {
         <Route path={"/chris"} exact={true}>
           <ChrisTest/>
         </Route>
+
+        <Route path='/menu'>
+
+          <MainMenu />
+
+        </Route>
+
         <ProtectedRoute path='/users' exact={true} >
           <UsersList/>
         </ProtectedRoute>
@@ -49,6 +58,8 @@ function App() {
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>
+
+    </div>
   );
 }
 
