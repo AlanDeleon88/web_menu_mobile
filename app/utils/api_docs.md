@@ -237,15 +237,15 @@ Returns all users.
   - Body:
     ```json
             "user" : {
-                    "id" : 1
-                    "first_name" : "John"
-                    "last_name"  : "Smith"
-                    "username" : "Jsmhiz"
-                    "email" : "Jsmix@gmail.com"
+                    "id" : 1,
+                    "first_name" : "John",
+                    "last_name"  : "Smith",
+                    "username" : "Jsmhiz",
+                    "email" : "Jsmix@gmail.com",
                     "menus" : [
                                  {
-                                     "id" : 1
-                                     "name" : "huku"
+                                     "id" : 1,
+                                     "name" : "huku",
                                      "user_id" : 1
                                  }
                               ]
@@ -257,6 +257,25 @@ Returns all users.
   ```json
     {"error" : "unable to find a user with that id"}
   ```
+
+### get all restaunts owned by user
+- Require Authentication: true
+- Request
+  - Method : GET
+  - URL : /users/:id/restaurants
+  - Body : none
+-Response
+
+## Restaurants
+
+### get restaurant by id
+
+### add a new restaurant
+
+### edit a restaurant
+
+### delete a restaurant
+
 ## Menus
 ### Get all menus
 Returns all menus.
