@@ -18,7 +18,7 @@ class Restaurant(db.Model):
     menus = db.relationship('Menu', back_populates='restaurants', cascade='all, delete-orphan')
 
     def to_dict(self):
-        {
+         return{
             "id" : self.id,
             "name" : self.name,
             "owner_id" : self.owner_id,

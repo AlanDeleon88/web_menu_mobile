@@ -4,6 +4,7 @@ from app.models import db, SubMenu
 # Adds a demo user, you can add other users here if you want
 def seed_sub_menu():
     #* Kitchen -> 1, Sushi --> 2, Lunch SP -> 3, Drinks -> 4
+    
     appetizers = SubMenu(
         name='Appetizers', menu_id = 1, description ='Dishes for sharing before your entrees.'
         )
