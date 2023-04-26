@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { getMenus } from '../../store/menus'
-
-
+import banner from "./assets/HukuBanner.png"
+import menuItem from "./assets/sushi.jpeg"
 const MainMenu = () =>{
 
     //! study basic javascript and basic coding. sending commands to the computer.
@@ -36,8 +36,7 @@ const MainMenu = () =>{
         <>
             <div className='main-menu-container'>
                 <div className='main-menu-header'>
-                    {/* <img /> */}
-                    Huku
+                    <img className='main-menu-banner' src={banner}/>
                 </div>
                 <div className='main-menu-sub-menu-container'>
                     { isLoaded &&
@@ -45,7 +44,9 @@ const MainMenu = () =>{
                             {menus.map(el =>{
                                 return(
                                     <div className='sub-menu-container' key={el.id} onClick={handleItemClick}>
+                                        <div className='sub-menu-text-container'>
                                         {el.name}
+                                        </div>
                                     </div>
                                 )
                             })}
