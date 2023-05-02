@@ -3,11 +3,12 @@
     flex-direction: column;
     border: solid 1px red;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     height: 100%;
     width: 100%;
     font-size: 10vw;
-    background-color: rgb(229, 202, 30);
+    background-color: rgb(23, 23, 23);
+    overflow: scroll;
 }
 
 .main-menu-sub-menu-container{
@@ -15,11 +16,11 @@
     height: 80%;
     width: 98%;
 
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around; 
-    
+    justify-content: space-around;
+
 }
 
 .sub-menu-container{
@@ -34,23 +35,28 @@
     font-size:7.5vw;
     background-image: url("./assets/sushi.jpeg");
     background-size: cover;
+    /* background-position: 30%; */
     color: rgb(0, 255, 55);
 }
 
 .sub-menu-container:active{
     transform: scale(.95);
 }
-.main-menu-banner{
-    height: 99%;
-    width: 99%;
-
-}
 .main-menu-header{
+    width:100%;
+    height: 20%;
+    border: solid 1px pink;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 1.8%;
-    
+    align-items: flex-start;
+    /* margin-top: 1.8%; */
+    padding-top: 1.8%
+
+}
+.main-menu-banner{
+    height: 100%;
+    width: 95%;
+
 }
 .menu-food-item{
     height: 90%;
