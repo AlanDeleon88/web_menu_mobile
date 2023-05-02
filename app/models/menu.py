@@ -21,5 +21,6 @@ class Menu(db.Model):
         return{
             'id' : self.id,
             'name' : self.name,
-            'user_id' : self.user_id
+            'user_id' : self.restaurant_id,
+            'sub_menus' : [{'id' : subMenu.id, 'name' : subMenu.name, 'description' : subMenu.description} for subMenu in self.sub_menus]
         }

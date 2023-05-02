@@ -4,7 +4,7 @@ from app.models import db, SubMenu
 # Adds a demo user, you can add other users here if you want
 def seed_sub_menu():
     #* Kitchen -> 1, Sushi --> 2, Lunch SP -> 3, Drinks -> 4
-    
+
     appetizers = SubMenu(
         name='Appetizers', menu_id = 1, description ='Dishes for sharing before your entrees.'
         )
@@ -41,12 +41,20 @@ def seed_sub_menu():
         name = 'Lunch Entree Sushi', menu_id = 2, description = 'Lunch entrees from the sushi bar, from open to 3pm'
     )
 
+    lunchSpK = SubMenu(
+        name = 'Lunch Specials', menu_id = 1, description = 'Lunch specials from the kitchen, avaliable from open to 3pm'
+    )
+
+    lunchSpS = SubMenu(
+        name = 'Lunch Specials' , menu_id = 2, description = 'Lunch specials from the sushi bar, avaliable from open to 3pm'
+    )
+
     dinnerEntreeKitchen = SubMenu(
-        name = 'Dinner Entree', menu_id = 1, description = 'Dinner entrees from the kitchen served all day'
+        name = 'Dinner Entree Kitchen', menu_id = 1, description = 'Dinner entrees from the kitchen served all day'
     )
 
     dinnerEntreeSushi = SubMenu(
-        name = 'Dinner Entree', menu_id = 2, description = 'Dinner entrees from the sushi bar served all day'
+        name = 'Dinner Entree Sushi', menu_id = 2, description = 'Dinner entrees from the sushi bar served all day'
     )
 
     classicRolls = SubMenu(
@@ -58,7 +66,7 @@ def seed_sub_menu():
     )
 
     noAlchohol = SubMenu(
-        name = 'Non Alcoholic drinks', menu_id = 2, description = "Soda's and juices"
+        name = 'Non Alcoholic drinks', menu_id = 4, description = "Soda's and juices"
     )
 
     beer = SubMenu(
@@ -90,6 +98,8 @@ def seed_sub_menu():
     db.session.add(beer)
     db.session.add(wine)
     db.session.add(sake)
+    db.session.add(lunchSpK)
+    db.session.add(lunchSpS)
 
     db.session.commit()
 

@@ -10,8 +10,8 @@ const setMenu = payload =>{
 }
 
 export const getMenus = restaurantId => async (dispatch) =>{
-    console.log(restaurantId);
-    const response = await fetch(`/api/restaurants/${restaurantId}/menus`)
+    // console.log(restaurantId);
+    const response = await fetch(`/api/restaurants/${restaurantId}`)
 
     if(response.ok){
         const data = await response.json()

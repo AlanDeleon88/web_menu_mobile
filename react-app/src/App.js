@@ -9,6 +9,7 @@ import UsersList from './components/UsersList';
 import User from './components/User';
 import { authenticate } from './store/session';
 import MainMenu from './components/MainMenu';
+import Menu from './components/Menu';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -37,10 +38,14 @@ function App() {
           <SignUpForm />
         </Route>
 
-        <Route path='/menu'>
+        <Route path='/menu' exact={true}>
 
           <MainMenu />
 
+        </Route>
+
+        <Route path='/menu/:name/:menuId' exact={true}>
+          <Menu />
         </Route>
 
         <ProtectedRoute path='/users' exact={true} >

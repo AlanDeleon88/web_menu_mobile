@@ -28,9 +28,6 @@ const MainMenu = () =>{
 
     },[dispatch])
 
-    const handleItemClick = e =>{
-        history.push('/menu/submenu')
-    }
 
     return(
         <>
@@ -44,7 +41,9 @@ const MainMenu = () =>{
                         <>
                             {menus.map(el =>{
                                 return(
-                                    <div className='sub-menu-container' key={el.id} onClick={handleItemClick}>
+                                    <div className='sub-menu-container' key={el.menu_id} onClick={() =>{
+                                        history.push(`/menu/${el.name.replace(/\s/g, '')}/${el.menu_id}`)
+                                    }}>
                                         {el.name}
                                     </div>
                                 )
