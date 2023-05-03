@@ -20,15 +20,18 @@ const Menu = () =>{
     return(
         <>
             <div className="menu-main-container">
+                <div>
+                    header
+                </div>
+                <div className="menu-sub-menu-buttons-container">
                 {
                     subMenus.map(el =>{
                         return(
-                            <div className="menu-sub-menu-buttons">
-                                {el.name}
-                            </div>
-                        )
-                    })
+                                <div className="sub-menu-buttons">{el.name} </div>
+                                )
+                            })
                 }
+                </div>
             </div>
         </>
     )
